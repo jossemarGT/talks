@@ -1,1 +1,8 @@
+# Static assets
 reveal-js
+
+# IDE
+.vscode
+
+# Stuff ...
+Thumbs.db
