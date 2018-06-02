@@ -5,10 +5,10 @@ TARGET_SLIDES?=$(shell find ./slides -type f -name *.md | sed -e "s/slides/stati
 
 ifeq ($(STANDALONE),true)
 REVEALJS_FLAGS=-V revealjs-url=../reveal-js
-IMAGEURL_FIX_CMD=true
+IMAGEURL_FIX_CMD=sed -i -e "s/..\/..\/static\/img/..\/img/g" $1
 else
 REVEALJS_FLAGS=-V revealjs-url=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0
-IMAGEURL_FIX_CMD=sed -i -e "s/..\/img/https\:\/\/jossemargt.github.io\/pandoc-slides\/static\/img/g" $1
+IMAGEURL_FIX_CMD=sed -i -e "s/..\/..\/static\/img/https\:\/\/jossemargt.github.io\/pandoc-slides\/static\/img/g" $1
 endif
 
 .PHONY: all
