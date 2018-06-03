@@ -16,7 +16,7 @@ committee or other group or individual.
 
 ![Thanks Urban Dictionary](../../static/img/bamboozled.png)
 
-## The possible titles for this presentation could be
+## Some alternative titles for this presentation
 
 - There is a ________ for that
     * tool
@@ -51,14 +51,15 @@ How old do you think the "distributed architecture by services" is?
 
 - Do you know any other one outside the hype?
 
-# Where can I learn about it?
+# Where can I learn more?
 
-## It depends...
+## Well... It depends
 
 1. Books
-2. Courses
-3. Blogs
-4. Just stand up and ask to real people
+2. Source code
+3. Courses
+4. Blogs
+5. Just stand up and ask to real people
 
 # Caveats
 
@@ -94,4 +95,4 @@ How old do you think the "distributed architecture by services" is?
 ## FYI
 
 Twitter [jossemarGT](https://twitter.com/jossemarGT)<br>
-Github [jossemarGT](https://github.com/jossemarGT)<br>
+Github [jossemarGT](https://github.com/jossemarGT)
