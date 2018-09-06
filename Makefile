@@ -1,7 +1,7 @@
 # When in doubt just `make` :D
 THEME?=simple
 STANDALONE?=false
-TARGET_SLIDES?=$(shell find ./slides -type f -name *.md | sed -e "s/slides/static/" -e "s/.md/.html/")
+TARGET_SLIDES?=$(shell find ./slides -type f -name '*.md' | sed -e "s/slides/static/" -e "s/.md/.html/")
 
 ifeq ($(STANDALONE),true)
 REVEALJS_FLAGS=-V revealjs-url=../reveal-js
