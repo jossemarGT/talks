@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="J. Jossemar Cordero R.">
+  <title>Microservices and you</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/simple.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Microservices and you</h1>
+  <p class="author">J. Jossemar Cordero R.</p>
+  <p class="date">Sep 06, 2018</p>
+</section>
+
+<section id="disclaimer" class="slide level2" data-background-color="#FFA4A6">
+<h2>Disclaimer</h2>
+<p>The views, thoughts, and opinions expressed in this presentation belong solely to the author, and not necessarily to the author’s employer, organization, committee or other group or individual.</p>
+</section>
+<section><section id="whats-going-on-with-the-title" class="title-slide slide level1"><h1>What’s going on with the title?</h1></section><section id="welcome-to-the-microservices-hype" class="slide level2">
+<h2>Welcome to the microservices hype!</h2>
+<figure>
+<img data-src="https://jossemargt.github.io/pandoc-slides/static/img/hype.png" alt="Thanks Urban Dictionary" /><figcaption>Thanks Urban Dictionary</figcaption>
+</figure>
+</section></section>
+<section><section id="but-first-a-brief-story" class="title-slide slide level1"><h1>But first a brief story</h1></section><section id="you-in-the-monolotic-e-commerce-factory" class="slide level2">
+<h2>You in the monolotic e-commerce factory</h2>
+<ul>
+<li class="fragment">The requirement - 1 day</li>
+<li class="fragment">The implementation - 6 weeks</li>
+<li class="fragment">The (bad) deployment - 1 day</li>
+<li class="fragment">Back to implementation - 3 weeks</li>
+<li class="fragment">The (good) deployment - 1 day</li>
+</ul>
+</section></section>
+<section><section id="what-is-a-microservice" class="title-slide slide level1"><h1>What is a microservice?</h1></section><section id="microservice-architectural-style-is" class="slide level2">
+<h2>Microservice architectural style is…</h2>
+<blockquote>
+<p>An approach to developing a single application as a suite of small services […] (which) are built around business capabilities and independently deployable.</p>
+</blockquote>
+<p>Extract from <a href="https://www.martinfowler.com/microservices/#what">martinfowler.com</a></p>
+</section></section>
+<section><section id="now-rewrite-our-story" class="title-slide slide level1"><h1>Now rewrite our story</h1></section><section id="you-in-the-microservice-e-commerce-factory" class="slide level2">
+<h2>You in the microservice e-commerce factory</h2>
+<ul>
+<li class="fragment">The requirement - 1 day</li>
+<li class="fragment">The implementation - 3 weeks</li>
+<li class="fragment">The (bad) deployment - 0.5 hours</li>
+<li class="fragment">Back to implementation - 3 days</li>
+<li class="fragment">The (good) deployment - 0.5 hours</li>
+</ul>
+</section></section>
+<section><section id="pros-and-cons" class="title-slide slide level1"><h1>Pros and cons</h1></section><section id="pros" class="slide level2">
+<h2>Pros</h2>
+<ul>
+<li class="fragment">Strong module boundaries</li>
+<li class="fragment">Reduce side effects from changes</li>
+<li class="fragment">Independent release and deployment lifecycle</li>
+<li class="fragment">Technology and framework agnostic</li>
+</ul>
+</section><section id="cons" class="slide level2">
+<h2>Cons</h2>
+<ul>
+<li class="fragment">Overall complexity
+<ul>
+<li class="fragment">Data consistency</li>
+<li class="fragment">Interaction orchestration</li>
+<li class="fragment">Service communication</li>
+<li class="fragment">Operations and deployment</li>
+</ul></li>
+</ul>
+</section></section>
+<section><section id="where-can-i-learn-more" class="title-slide slide level1"><h1>Where can I learn more?</h1></section><section id="my-recomendations" class="slide level2">
+<h2>My recomendations</h2>
+<ul>
+<li class="fragment"><strong>Building Microservices:</strong> by <em>Sam Newman</em></li>
+<li class="fragment"><strong>Enterprise Integration Patterns</strong> by <em>Gregor Hohpe</em></li>
+<li class="fragment">The “go to guy” <a href="https://martinfowler.com/articles/microservices.html">https://martinfowler.com</a></li>
+</ul>
+</section></section>
+<section><section id="questions" class="title-slide slide level1"><h1>Questions?</h1></section></section>
+<section><section id="thanks" class="title-slide slide level1"><h1>Thanks</h1></section><section id="fyi" class="slide level2">
+<h2>FYI</h2>
+<p>Twitter <a href="https://twitter.com/jossemarGT">jossemarGT</a><br> Github <a href="https://github.com/jossemarGT">jossemarGT</a></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
