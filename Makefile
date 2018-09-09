@@ -1,4 +1,4 @@
-# When in doubt just `make` :D
+# When in doubt just `make`
 THEME?=simple
 STANDALONE?=false
 TARGET_SLIDES?=$(shell find ./slides -type f -name '*.md' | sed -e "s/slides/static/" -e "s/.md/.html/")
@@ -16,7 +16,7 @@ all: $(TARGET_SLIDES)
 
 static/%.html: slides/%.md
 	mkdir -p $(shell dirname $@)
-	pandoc -t revealjs -s --incremental $(REVEALJS_FLAGS) --slide-level 2 -V theme=$(THEME) -o $@ $<
+	pandoc -t revealjs -s --incremental $(REVEALJS_FLAGS) --slide-level 2 --template slide.template -V theme=$(THEME) -o $@ $< config.yaml
 	$(call IMAGEURL_FIX_CMD,$@)
 
 static/reveal-js:

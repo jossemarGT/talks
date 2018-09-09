@@ -1,5 +1,4 @@
 ---
-author: J. Jossemar Cordero R.
 title: Concept Driven Infrastructure
 date: May 29, 2018
 ---
@@ -83,16 +82,3 @@ How old do you think the "distributed architecture by services" is?
 - Bunch more -> <https://apiumhub.com/tech-blog-barcelona/devops-reading-list-devops-books>
 
 # Questions?
-
-# Bonus
-
-## Next meetup (proposal)
-
-**De-conference**: "The three ways of DevOps"<br>from [The Phoenix Project](https://www.audible.com/pd/Business/The-Phoenix-Project-Audiobook/B00VAZZY32) book
-
-# Thanks
-
-## FYI
-
-Twitter [jossemarGT](https://twitter.com/jossemarGT)<br>
-Github [jossemarGT](https://github.com/jossemarGT)
