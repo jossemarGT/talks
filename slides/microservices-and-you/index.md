@@ -1,5 +1,4 @@
 ---
-author: J. Jossemar Cordero R.
 title: Microservices and you
 date: Sep 06, 2018
 ---
@@ -34,7 +33,7 @@ committee or other group or individual.
 
 Extract from [martinfowler.com](https://www.martinfowler.com/microservices/#what)
 
-# Now rewrite our story
+# Let's rewrite our story
 
 ## You in the microservice e-commerce factory
 
@@ -66,15 +65,8 @@ Extract from [martinfowler.com](https://www.martinfowler.com/microservices/#what
 
 ## My recomendations
 
-- **Building Microservices:** by *Sam Newman*
+- **Building Microservices** by *Sam Newman*
 - **Enterprise Integration Patterns** by *Gregor Hohpe*
 - The "go to guy"  [https://martinfowler.com](https://martinfowler.com/articles/microservices.html)
 
 # Questions?
-
-# Thanks
-
-## FYI
-
-Twitter [jossemarGT](https://twitter.com/jossemarGT)<br>
-Github [jossemarGT](https://github.com/jossemarGT)
