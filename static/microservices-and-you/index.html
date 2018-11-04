@@ -14,6 +14,8 @@
       span.smallcaps{font-variant: small-caps;}
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
+      #qrcode-holder img {display: block; margin: 0 auto;}
+      html.mobile #qrcode-holder {display: none;}
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/simple.css" id="theme">
   <!-- Printing and PDF exports -->
@@ -108,8 +110,9 @@
 
 <section id="final-comment-slide">
   <h1>Thanks!</h1>
+  <div id="qrcode-holder"></div>
   <p>
-    Github &#8250; <a href="http://github.com/jossemarGT">jossemarGT</a><br/>
+  Github &#8250; <a href="http://github.com/jossemarGT">jossemarGT</a><br/>
   Twitter &#8250; <a href="http://twitter.com/jossemarGT">jossemarGT</a>
   </p>
 </section>
@@ -120,6 +123,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
 
   <script>
 
@@ -136,6 +140,17 @@
           { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.js', async: true }
         ]
       });
+    </script>
+    <script>
+    var fallbackURL = window.location.href.substring(0, window.location.href.indexOf('#'));
+    var targetURL = "http://bit.ly/2QmMUMt" || fallbackURL;
+
+    // Skip QR generation on small devices
+    if (screen.width > 760) {
+      var qrcode = new QRCode(document.getElementById("qrcode-holder"), {
+        text: targetURL
+       });
+    }
     </script>
     </body>
 </html>
