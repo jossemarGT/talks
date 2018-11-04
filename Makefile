@@ -5,9 +5,11 @@ TARGET_SLIDES?=$(shell find ./slides -type f -name '*.md' | sed -e "s/slides/sta
 
 ifeq ($(STANDALONE),true)
 REVEALJS_FLAGS=-V revealjs-url=../reveal-js
+QRCODEJS_FLAGS=-V revealjs-url=../qrcode-js
 IMAGEURL_FIX_CMD=sed -i -e "s/..\/..\/static\/img/..\/img/g" $1
 else
 REVEALJS_FLAGS=-V revealjs-url=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0
+QRCODEJS_FLAGS=-V qrcodejs-url=https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2
 IMAGEURL_FIX_CMD=sed -i -e "s/..\/..\/static\/img/https\:\/\/jossemargt.github.io\/pandoc-slides\/static\/img/g" $1
 endif
 
@@ -16,7 +18,7 @@ all: $(TARGET_SLIDES)
 
 static/%.html: slides/%.md
 	mkdir -p $(shell dirname $@)
-	pandoc -t revealjs -s --incremental $(REVEALJS_FLAGS) --slide-level 2 --template slide.template -V theme=$(THEME) -o $@ $< config.yaml
+	pandoc -t revealjs -s --incremental $(REVEALJS_FLAGS) $(QRCODEJS_FLAGS) --slide-level 2 --template slide.template -V theme=$(THEME) -o $@ $< config.yaml
 	$(call IMAGEURL_FIX_CMD,$@)
 
 static/reveal-js:
@@ -24,3 +26,9 @@ static/reveal-js:
 	tar -xvzf revealjs.tar.gz
 	mv reveal.js-master static/reveal-js
 	rm revealjs.tar.gz
+
+static/qrcode-js:
+	curl -L https://github.com/davidshimjs/qrcodejs/archive/master.tar.gz -o qrcodejs.tar.gz
+	tar -xvzf qrcodejs.tar.gz
+	mv qrcodejs-master static/qrcode-js
+	rm qrcodejs.tar.gz

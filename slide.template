@@ -22,6 +22,10 @@ $endif$
       span.smallcaps{font-variant: small-caps;}
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
+$if(generate_qrcode)$
+      #qrcode-holder img {display: block; margin: 0 auto;}
+      html.mobile #qrcode-holder {display: none;}
+$endif$
 $if(quotes)$
       q { quotes: "“" "”" "‘" "’"; }
 $endif$
@@ -89,9 +93,12 @@ $body$
 
 <section id="$idprefix$final-comment-slide">
   <h1>$final_comment$</h1>
+$if(generate_qrcode)$
+  <div id="qrcode-holder"></div>
+$endif$
   <p>
 $if(github_username)$
-    Github &#8250; <a href="http://github.com/$github_username$">$github_username$</a><br/>
+  Github &#8250; <a href="http://github.com/$github_username$">$github_username$</a><br/>
 $endif$
 $if(twitter_username)$
   Twitter &#8250; <a href="http://twitter.com/$twitter_username$">$twitter_username$</a>
@@ -105,6 +112,9 @@ $endif$
 
   <script src="$revealjs-url$/lib/js/head.min.js"></script>
   <script src="$revealjs-url$/js/reveal.js"></script>
+$if(generate_qrcode)$
+  <script src="$qrcodejs-url$/qrcode.min.js"></script>
+$endif$
 
   <script>
 
@@ -288,6 +298,19 @@ $endif$
         ]
       });
     </script>
+$if(generate_qrcode)$
+    <script>
+    var fallbackURL = window.location.href.substring(0, window.location.href.indexOf('#'));
+    var targetURL = "$short-url$" || fallbackURL;
+
+    // Skip QR generation on small devices
+    if (screen.width > 760) {
+      var qrcode = new QRCode(document.getElementById("qrcode-holder"), {
+        text: targetURL
+       });
+    }
+    </script>
+$endif$
   $for(include-after)$
   $include-after$
   $endfor$
