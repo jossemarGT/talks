@@ -1,5 +1,7 @@
 # Static assets
-reveal-js
+static/reveal-js
+static/qrcode-js
+*.tar.gz
 
 # IDE
 .vscode
