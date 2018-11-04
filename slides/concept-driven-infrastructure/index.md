@@ -1,6 +1,7 @@
 ---
 title: Concept Driven Infrastructure
 date: May 29, 2018
+short-url: http://bit.ly/2F04FQl
 ---
 
 ## Disclaimer {data-background-color="#FFA4A6"}

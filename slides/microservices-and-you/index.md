@@ -1,6 +1,7 @@
 ---
 title: Microservices and you
 date: Sep 06, 2018
+short-url: http://bit.ly/2QmMUMt
 ---
 
 ## Disclaimer {data-background-color="#FFA4A6"}
