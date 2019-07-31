@@ -1,7 +1,7 @@
 ---
 title: The DevOps Paradox
 date: Jul 31, 2019
-short-url: http://bit.ly/2XWqswE
+short-url: http://bit.ly/2OtebA1
 ---
 
 ## Disclaimer {data-background-color="#FFA4A6"}
@@ -117,7 +117,7 @@ From Google's "Site Reliability Engineering" book
 
 ![](../../static/img/devops-antipatterns.png)
 
-## Our next goals
+## How the future looks like
 
 ![](../../static/img/devops-types.png)
 
@@ -127,7 +127,7 @@ From Google's "Site Reliability Engineering" book
 
 - DevOps is a cultural practice that involves best practices, automation and tools
 - If you need a hard reference in DevOps, you can use Site Reliability Engineering as a framework
-- It is quite difficult for a company to be 100% DevOps, because it requires to get all the teams across the company to be involved, but it's worth the effort!
+- It is quite difficult for a company to be 100% DevOps, because it requires to get **all the teams across the company** to be involved, but it's worth the effort!
 
 ## Questions?
 

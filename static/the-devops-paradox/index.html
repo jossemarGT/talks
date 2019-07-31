@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="J. Jossemar Cordero R.">
+  <title>The DevOps Paradox</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+      #qrcode-holder img {display: block; margin: 0 auto;}
+      html.mobile #qrcode-holder {display: none;}
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/simple.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">The DevOps Paradox</h1>
+  <p class="author">J. Jossemar Cordero R.</p>
+  <p class="date">Jul 31, 2019</p>
+</section>
+
+<section id="disclaimer" class="slide level2" data-background-color="#FFA4A6">
+<h2>Disclaimer</h2>
+<p>The views, thoughts, and opinions expressed in this presentation belong solely to the author, and not necessarily to the author’s employer, organization, committee or other group or individual.</p>
+</section>
+<section><section id="whats-going-on-with-the-title" class="title-slide slide level1"><h1>What’s going on with the title?</h1></section><section id="what-is-a-paradox-exactly" class="slide level2">
+<h2>What is a paradox exactly?</h2>
+<blockquote>
+<p>A paradox is a seemingly absurd or self-contradictory statement in logic that, superficially, cannot be true but also cannot be false.</p>
+</blockquote>
+<p>ie: “This sentence is a lie.”</p>
+</section><section id="how-about-this-other-example" class="slide level2">
+<h2>How about this other example?</h2>
+<blockquote>
+<p>As Startup we <strong>do</strong> DevOps since we already have a team for that, regardless we don’t know what they do.</p>
+</blockquote>
+<!-- Hint: You just created a new silo, which goes against DevOps. -->
+</section></section>
+<section><section id="thanks" class="title-slide slide level1"><h1>Thanks!</h1></section><section id="just-kidding" class="slide level2">
+<h2>Just kidding :)</h2>
+</section><section id="taking-this-talk-by-the-book" class="slide level2">
+<h2>Taking this talk by the “book”</h2>
+<ul>
+<li class="fragment"><strong>The Goal</strong> - <em>Eliyahu M. Goldratt</em></li>
+<li class="fragment"><strong>The Phoenix Project</strong> - <em>Gene Kim, George Spafford, Kevin Behr</em></li>
+<li class="fragment"><strong>Site Reliability Engineering</strong> - <em>Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy</em></li>
+<li class="fragment"><strong>The Site Reliability Workbook</strong> - <em>Betsy Beyer, Niall Richard Murphy, David K. Rensin, Kent Kawahara, Stephen Thorne</em></li>
+</ul>
+</section></section>
+<section><section id="the-goal" class="title-slide slide level1"><h1>The Goal</h1></section><section id="have-you-asked-yourself-why-are-you-on-this-company" class="slide level2">
+<h2>Have you asked yourself why are you on this company?</h2>
+<p>At the end it is all about delivering value! ($$$)</p>
+</section><section id="regardless-the-industry-some-facts-stay-true" class="slide level2">
+<h2>Regardless the industry some facts stay true!</h2>
+<ul>
+<li class="fragment">Business and operations have been in a love/hate relationship for a long time</li>
+<li class="fragment">It doesn’t matter how much you optimize a process if you don’t take in account your bottlenecks</li>
+</ul>
+</section></section>
+<section><section id="devops-big-picture" class="title-slide slide level1"><h1>DevOps big picture</h1></section><section id="as-in-the-phoenix-project" class="slide level2">
+<h2>As in “The Phoenix Project”</h2>
+<ul>
+<li class="fragment"><strong>Dev</strong> (Development) Needs to push its product changes as soon as possible</li>
+<li class="fragment"><strong>Ops</strong> (Operations) Strives for stability</li>
+</ul>
+<!-- See also https://puppet.com/blog/what-is-devops -->
+</section><section id="the-first-way" class="slide level2">
+<h2>The first way</h2>
+<p><img data-src="https://jossemargt.github.io/pandoc-slides/static/img/devops-first-way.png" /></p>
+<p>Systems thinking and flow</p>
+</section><section id="the-second-way" class="slide level2">
+<h2>The second way</h2>
+<p><img data-src="https://jossemargt.github.io/pandoc-slides/static/img/devops-second-way.png" /></p>
+<p>Amplify feedback loops</p>
+</section><section id="the-third-way" class="slide level2">
+<h2>The third way</h2>
+<p><img data-src="https://jossemargt.github.io/pandoc-slides/static/img/devops-third-way.png" /></p>
+<p>Continual experimentation and learning <strong>culture</strong></p>
+</section><section id="quick-question" class="slide level2">
+<h2>Quick question</h2>
+<p>On those three graphs where is the <strong>business deparment</strong> and the <strong>customers</strong>?</p>
+</section></section>
+<section><section id="but-i-thought-it-was-a-job-title" class="title-slide slide level1"><h1>But I thought it was a job title</h1></section><section id="it-depends" class="slide level2">
+<h2>It depends!</h2>
+<ul>
+<li class="fragment">It could be the pioneer team name that works toward implementing this cultural practice</li>
+<li class="fragment">Some cloud providers use this term on their certifications. ei: <a href="https://aws.amazon.com/certification/certified-devops-engineer-professional/">AWS Certified DevOps Engineer</a> and <a href="https://www.microsoft.com/en-us/learning/azure-devops.aspx">Azure DevOps Engineer Expert</a> <!--
+Is not the same as the Linux Profissional Institute "DevOps Tools Engineer" 
+https://www.lpi.org/our-certifications/devops-overview--></li>
+<li class="fragment"><strong>Caution.</strong> Nowadays companies use this term to broadly describe any professional that deals with infrastructure and automates.</li>
+</ul>
+</section><section id="so-at-the-end-is-up-to-you" class="slide level2">
+<h2>So… at the end is up to you :)</h2>
+</section></section>
+<section><section id="stop-talking-and-show-me-the-code" class="title-slide slide level1"><h1>Stop talking and show me the code!</h1></section><section id="site-reliability-engineering-as-a-framework" class="slide level2">
+<h2>Site Reliability Engineering as a framework</h2>
+<blockquote>
+<p>One could equivalently view SRE as a specific implementation of DevOps with some idiosyncratic extensions.</p>
+</blockquote>
+<p>From Google’s “Site Reliability Engineering” book</p>
+</section><section id="so-how" class="slide level2">
+<h2>So how?</h2>
+<ul>
+<li class="fragment">Foundations (SLO, Visility, Alerting, Automation)</li>
+<li class="fragment">Practices (On call, Post Morten, Load management, Remove toil, Canary releases) <!-- SRE as job title --></li>
+<li class="fragment">Processes (Service lifecycle, SRE Team lifecycles)</li>
+<li class="fragment">Organizational Changemanagement (error budgets)</li>
+</ul>
+</section></section>
+<section><section id="where-are-we-going" class="title-slide slide level1"><h1>Where are we going?</h1></section><section id="devops-topoligies" class="slide level2">
+<h2>DevOps Topoligies</h2>
+<p><a href="https://web.devopstopologies.com/" class="uri">https://web.devopstopologies.com/</a></p>
+</section><section id="where-we-have-been" class="slide level2">
+<h2>Where we have been</h2>
+<p><img data-src="https://jossemargt.github.io/pandoc-slides/static/img/devops-antipatterns.png" /></p>
+</section><section id="how-the-future-looks-like" class="slide level2">
+<h2>How the future looks like</h2>
+<p><img data-src="https://jossemargt.github.io/pandoc-slides/static/img/devops-types.png" /></p>
+</section></section>
+<section><section id="wrapping-up" class="title-slide slide level1"><h1>Wrapping up</h1></section><section id="my-2-cents" class="slide level2">
+<h2>My 2 cents</h2>
+<ul>
+<li class="fragment">DevOps is a cultural practice that involves best practices, automation and tools</li>
+<li class="fragment">If you need a hard reference in DevOps, you can use Site Reliability Engineering as a framework</li>
+<li class="fragment">It is quite difficult for a company to be 100% DevOps, because it requires to get <strong>all the teams across the company</strong> to be involved, but it’s worth the effort!</li>
+</ul>
+</section><section id="questions" class="slide level2">
+<h2>Questions?</h2>
+</section></section>
+
+
+<section id="final-comment-slide">
+  <h1>Thanks!</h1>
+  <div id="qrcode-holder"></div>
+  <p>
+  Github &#8250; <a href="http://github.com/jossemarGT">jossemarGT</a><br/>
+  Twitter &#8250; <a href="http://twitter.com/jossemarGT">jossemarGT</a>
+  </p>
+</section>
+
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+    var fallbackURL = window.location.href.substring(0, window.location.href.indexOf('#'));
+    var targetURL = "http://bit.ly/2OtebA1" || fallbackURL;
+
+    // Skip QR generation on small devices
+    if (screen.width > 760) {
+      var qrcode = new QRCode(document.getElementById("qrcode-holder"), {
+        text: targetURL
+       });
+    }
+    </script>
+    </body>
+</html>
