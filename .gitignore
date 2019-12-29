@@ -3,6 +3,9 @@ static/reveal-js
 static/qrcode-js
 *.tar.gz
 
+# Temporary assets
+index.tmp.md
+
 # IDE
 .vscode
 
