@@ -25,11 +25,11 @@ ie: "This sentence is a lie."
 
 <!-- Hint: You just created a new silo, which goes against DevOps. -->
 
-# Thanks!
+# The end
 
 ## Just kidding :)
 
-## Taking this talk by the "book"
+## Let's get nerdy with some books
 
 - **The Goal** - *Eliyahu M. Goldratt*
 - **The Phoenix Project** - *Gene Kim, George Spafford, Kevin Behr*
@@ -82,14 +82,16 @@ On those three graphs where is the **business deparment** and the **customers**?
 
 ## It depends!
 
-- It could be the pioneer team name that works toward implementing this cultural practice
-- Some cloud providers use this term on their certifications. ei: [AWS Certified DevOps Engineer](https://aws.amazon.com/certification/certified-devops-engineer-professional/) and [Azure DevOps Engineer Expert](https://www.microsoft.com/en-us/learning/azure-devops.aspx)
+- The pioneer team name that works toward introducing this cultural change
+- A certification on specific tools that enables it. ei: [AWS Certified DevOps Engineer](https://aws.amazon.com/certification/certified-devops-engineer-professional/) and [Azure DevOps Engineer Expert](https://www.microsoft.com/en-us/learning/azure-devops.aspx)
 <!--
-Is not the same as the Linux Profissional Institute "DevOps Tools Engineer" 
+Is not the same as the Linux Professional Institute "DevOps Tools Engineer"
 https://www.lpi.org/our-certifications/devops-overview-->
-- **Caution.** Nowadays companies use this term to broadly describe any professional that deals with infrastructure and automates.
+- **Heads up** Some companies see it as an analogous to "Full Stack Develper" but applied to infrastructure, tooling or automation.
 
-## So... at the end is up to you :)
+## tl;dr: The term itself is trendy and risky but is up to you how to use it
+
+<!-- ei: If I really want to be hired by a company, call me <however you want> Engineer -->
 
 # Stop talking and show me the code!
 
@@ -107,17 +109,17 @@ From Google's "Site Reliability Engineering" book
 - Processes (Service lifecycle, SRE Team lifecycles)
 - Organizational Changemanagement (error budgets)
 
-# Where are we going? 
+# The treasure hunt map
 
 ## DevOps Topoligies
 
 <https://web.devopstopologies.com/>
 
-## Where we have been
+## Where most companies start from
 
 ![](../../static/img/devops-antipatterns.png)
 
-## Our next goals
+## How the future should look like
 
 ![](../../static/img/devops-types.png)
 
@@ -125,9 +127,8 @@ From Google's "Site Reliability Engineering" book
 
 ## My 2 cents
 
-- DevOps is a cultural practice that involves best practices, automation and tools
+- DevOps is a _cultural practice_ that involves best practices, automation and tools
 - If you need a hard reference in DevOps, you can use Site Reliability Engineering as a framework
 - It is quite difficult for a company to be 100% DevOps, because it requires to get all the teams across the company to be involved, but it's worth the effort!
 
 ## Questions?
-
