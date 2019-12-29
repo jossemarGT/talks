@@ -16,6 +16,12 @@ endif
 .PHONY: all
 all: $(TARGET_SLIDES)
 
+static/index.html:
+	rm -f index.tmp.md
+	echo '## The slide index' > index.tmp.md
+	echo $(TARGET_SLIDES) | sed -e 's/[^[:space:]]*/\n- [&](&)/g' -e 's%/index.html]%]%g' -e 's%\./static/%%g' >> index.tmp.md
+	pandoc -t revealjs -s $(REVEALJS_FLAGS) --metadata pagetitle="jossemarGT's slides" -V theme=$(THEME) -o $@ index.tmp.md
+
 static/%.html: slides/%.md
 	mkdir -p $(shell dirname $@)
 	pandoc -t revealjs -s --incremental $(REVEALJS_FLAGS) $(QRCODEJS_FLAGS) --slide-level 2 --template slide.template -V theme=$(THEME) -o $@ $< config.yaml
