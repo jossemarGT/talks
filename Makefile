@@ -1,7 +1,7 @@
 # When in doubt just `make`
 THEME?=simple
 STANDALONE?=false
-TARGET_SLIDES?=$(shell find ./slides -type f -name '*.md' -printf '%Ts\t%p\n' | sort -n | cut -f2 | sed -e "s/slides/static/" -e "s/.md/.html/")
+TARGET_SLIDES?=$(shell find ./slides -type f -name 'index.md' -printf '%Ts\t%p\n' | sort -n | cut -f2 | sed -e "s/slides/static/" -e "s/.md/.html/")
 
 ifeq ($(STANDALONE),true)
 REVEALJS_FLAGS=-V revealjs-url=../reveal-js
@@ -18,9 +18,11 @@ all: $(TARGET_SLIDES)
 
 static/index.html:
 	rm -f index.tmp.md
-	echo '## The slide index' > index.tmp.md
-	echo $(TARGET_SLIDES) | sed -e 's/[^[:space:]]*/\n- [&](&)/g' -e 's%/index.html]%]%g' -e 's%\./static/%%g' >> index.tmp.md
-	pandoc -t revealjs -s $(REVEALJS_FLAGS) --metadata pagetitle="jossemarGT's slides" -V theme=$(THEME) -o $@ index.tmp.md
+	@echo '## Presentations within this site' > index.tmp.md
+	@echo $(TARGET_SLIDES) | sed -e 's/[^[:space:]]*/\n- [&](&)/g' -e 's%/index.html]%]%g' -e 's%\./static/%%g' >> index.tmp.md
+	@echo '' >> index.tmp.md
+	@cat slides/externals.md >> index.tmp.md
+	pandoc -t html -o $@ index.tmp.md
 
 static/%.html: slides/%.md
 	mkdir -p $(shell dirname $@)
