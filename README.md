@@ -1,15 +1,16 @@
-# My pandoc (transformed) slides
+# Talk's slides
 
-On this repository you can find slides I have created for past talks and written
-in Markdown notation.
+Although I cannot call myself a "public speaker", I would like to keep track of
+the talks I have shared in the past. Within this repository, you can find:
 
-Eeyup, these are post-processed using [pandoc](https://pandoc.org/) and
-published as static pages
-[over here](https://jossemargt.github.io/pandoc-slides/static/).
+- Slides I have written in Markdown notation
+- Links to presentations I have created using other platforms (i.e.: Google Slides)
 
-## How does it work?
+All of those can be found [over here](https://jossemargt.github.io/talks/static/).
 
-1. Write presentation in markdown notation.
+## How does it process the MD files?
+
+1. Write the presentation in markdown notation.
 2. `make`
 3. ???
 4. Profit!
