@@ -1,7 +1,7 @@
 # When in doubt just `make`
 THEME?=simple
 STANDALONE?=false
-TARGET_SLIDES?=$(shell find ./slides -type f -name '*.md' | sed -e "s/slides/static/" -e "s/.md/.html/")
+TARGET_SLIDES?=$(shell find ./slides -type f -name '*.md' -printf '%Ts\t%p\n' | sort -n | cut -f2 | sed -e "s/slides/static/" -e "s/.md/.html/")
 
 ifeq ($(STANDALONE),true)
 REVEALJS_FLAGS=-V revealjs-url=../reveal-js
@@ -10,7 +10,7 @@ IMAGEURL_FIX_CMD=sed -i -e "s/..\/..\/static\/img/..\/img/g" $1
 else
 REVEALJS_FLAGS=-V revealjs-url=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0
 QRCODEJS_FLAGS=-V qrcodejs-url=https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2
-IMAGEURL_FIX_CMD=sed -i -e "s/..\/..\/static\/img/https\:\/\/jossemargt.github.io\/pandoc-slides\/static\/img/g" $1
+IMAGEURL_FIX_CMD=sed -i -e "s/..\/..\/static\/img/https\:\/\/jossemargt.github.io\/talks\/static\/img/g" $1
 endif
 
 .PHONY: all
