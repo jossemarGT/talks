@@ -1,11 +1,10 @@
-# Static assets
+# "offline" dependencies
 static/reveal-js
 static/qrcode-js
 *.tar.gz
 
-# Temporary assets
-index.tmp.md
-index-makeup.tmp.js
+# Temporary artifacts
+.tmp
 
 # IDE
 .vscode

@@ -2,8 +2,8 @@
 THEME?=simple
 STANDALONE?=false
 SLIDE_INDEX_TITLE?=Talks index
-SLIDE_SOURCES:=$(shell find ./slides -type f -name index.md -exec grep -oHP 'date:\K.*' {} \;  | sort -t',' -k2 -r | cut -d: -f1)
-SLIDE_TARGETS?=$(shell find ./slides -type f -name index.md | sed -e 's/slides/static/' -e 's/.md/.html/')
+SLIDE_SOURCES:=$(shell find slides -type f -name index.md -exec grep -oHP 'date:\K.*' {} \;  | sort -t',' -k2 -r | cut -d: -f1)
+SLIDE_TARGETS?=$(shell find slides -type f -name index.md | sed -e 's/slides/static/' -e 's/.md/.html/')
 
 ifeq ($(STANDALONE),true)
 REVEALJS_FLAGS=-V revealjs-url=../reveal-js
@@ -19,16 +19,16 @@ endif
 all: $(SLIDE_TARGETS)
 
 static/index.html:
-	rm -f index.tmp.md
+	rm -rf .tmp
+	mkdir .tmp
 	@-$(foreach slide,$(SLIDE_SOURCES), sed -ne '1{/^---$$/!q;};1,/^---$$/p' $(slide) | \
 											sed -e 's/title:/##/' -e '/---/d' | \
-											sed -E 's#([^:]*):(.*)#<span class="\1">\2</span>#' >>index.tmp.md; \
-										echo $(slide) | cut -d/ -f3 | sed -e 's#[^\w]*#[Slides](&/)\n#' >>index.tmp.md;)
-	cat slides/externals.md >>index.tmp.md
-	@echo '<script type="text/javascript">' >index-makeup.tmp.js
-	@cat index-makeup.js  >>index-makeup.tmp.js
-	@echo '</script>' >>index-makeup.tmp.js
-	pandoc --standalone --self-contained --section-divs --css=index.css -A index-makeup.tmp.js --metadata='title=$(SLIDE_INDEX_TITLE)' -t html5 -o $@ index.tmp.md
+											sed -E 's#([^:]*):(.*)#<span class="\1">\2</span>#' >>.tmp/$(subst /,-,$(slide)); \
+										echo $(slide) | cut -d/ -f2 | sed -e 's#[^\w]*#[Slides](&/)\n#' >>.tmp/$(subst /,-,$(slide));)
+	csplit -z --quiet --prefix=.tmp/slides-external --suffix-format=%02d.md --suppress-matched slides/externals.md /^$$/ {*}
+	cat $$(find .tmp -type f -exec grep -H 'date' {} \; | sort -t',' -k2 -r | cut -d: -f1) >>.tmp/index.tmp.md
+	sed -i -E 's/(##.*)/\n\1/g' .tmp/index.tmp.md
+	pandoc --standalone --self-contained --section-divs --css=index.css --metadata='title=$(SLIDE_INDEX_TITLE)' -t html5 -o $@ .tmp/index.tmp.md
 
 static/%.html: slides/%.md
 	mkdir -p $(shell dirname $@)
