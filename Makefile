@@ -28,7 +28,8 @@ static/index.html:
 	csplit -z --quiet --prefix=.tmp/slides-external --suffix-format=%02d.md --suppress-matched slides/externals.md /^$$/ {*}
 	cat $$(find .tmp -type f -exec grep -H 'date' {} \; | sort -t',' -k2 -r | cut -d: -f1) >>.tmp/index.tmp.md
 	sed -i -E 's/(##.*)/\n\1/g' .tmp/index.tmp.md
-	pandoc --standalone --self-contained --section-divs --css=index.css --metadata='title=$(SLIDE_INDEX_TITLE)' -t html5 -o $@ .tmp/index.tmp.md
+	@echo '<base target="_blank" />' >.tmp/head-overrides.html
+	pandoc --standalone --self-contained --section-divs --css=index.css -H .tmp/head-overrides.html --metadata='title=$(SLIDE_INDEX_TITLE)' -t html5 -o $@ .tmp/index.tmp.md
 
 static/%.html: slides/%.md
 	mkdir -p $(shell dirname $@)
