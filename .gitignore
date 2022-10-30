@@ -5,6 +5,7 @@ static/qrcode-js
 
 # Temporary assets
 index.tmp.md
+index-makeup.tmp.js
 
 # IDE
 .vscode
