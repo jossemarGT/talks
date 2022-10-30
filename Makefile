@@ -1,7 +1,9 @@
 # When in doubt just `make`
 THEME?=simple
 STANDALONE?=false
-TARGET_SLIDES?=$(shell find ./slides -type f -name 'index.md' -printf '%Ts\t%p\n' | sort -n | cut -f2 | sed -e "s/slides/static/" -e "s/.md/.html/")
+SLIDE_INDEX_TITLE?=Talks index
+SLIDE_SOURCES:=$(shell find ./slides -type f -name 'index.md')
+SLIDE_TARGETS?=$(shell find ./slides -type f -name 'index.md' | sed -e 's/slides/static/' -e 's/.md/.html/')
 
 ifeq ($(STANDALONE),true)
 REVEALJS_FLAGS=-V revealjs-url=../reveal-js
@@ -14,15 +16,16 @@ IMAGEURL_FIX_CMD=sed -i -e "s/..\/..\/static\/img/https\:\/\/jossemargt.github.i
 endif
 
 .PHONY: all
-all: $(TARGET_SLIDES)
+all: $(SLIDE_TARGETS)
 
 static/index.html:
 	rm -f index.tmp.md
-	@echo '## Presentations within this site' > index.tmp.md
-	@echo $(TARGET_SLIDES) | sed -e 's/[^[:space:]]*/\n- [&](&)/g' -e 's%/index.html]%]%g' -e 's%\./static/%%g' >> index.tmp.md
-	@echo '' >> index.tmp.md
+	@-$(foreach slide,$(SLIDE_SOURCES), sed -ne '1{/^---$$/!q;};1,/^---$$/p' $(slide) | \
+											sed -e 's/title:/##/' -e '/---/d' | \
+											sed -E 's#([^:]*):(.*)#<span class="\1">\2</span>#' >>index.tmp.md; \
+										echo $(slide) | cut -d/ -f3 | sed -e 's#[^\w]*#[Slides](&/)\n#' >>index.tmp.md;)
 	@cat slides/externals.md >> index.tmp.md
-	pandoc -t html -o $@ index.tmp.md
+	pandoc --standalone --self-contained --section-divs --css=index.css --metadata title='$(SLIDE_INDEX_TITLE)' -t html5 -o $@ index.tmp.md
 
 static/%.html: slides/%.md
 	mkdir -p $(shell dirname $@)
