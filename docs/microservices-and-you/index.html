@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="J. Jossemar Cordero R.">
-  <meta name="dcterms.date" content="2018-05-29">
-  <title>Concept Driven Infrastructure</title>
+  <title>Microservices and you</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -36,9 +35,9 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Concept Driven Infrastructure</h1>
+  <h1 class="title">Microservices and you</h1>
   <p class="author">J. Jossemar Cordero R.</p>
-  <p class="date">May 29, 2018</p>
+  <p class="date">Sep 06, 2018</p>
 </section>
 
 <section id="disclaimer" class="slide level2" data-background-color="#FFA4A6">
@@ -50,62 +49,78 @@
 <h1>What’s going on with the title?</h1>
 
 </section>
-<section id="flash-news-you-have-been-bamboozled" class="slide level2">
-<h2>FLASH NEWS: You have been bamboozled</h2>
+<section id="welcome-to-the-microservices-hype" class="slide level2">
+<h2>Welcome to the microservices hype!</h2>
 <figure>
-<img data-src="https://jossemargt.github.io/talks/static/img/bamboozled.png" alt="" /><figcaption>Thanks Urban Dictionary</figcaption>
+<img data-src="https://jossemargt.github.io/talks/img/hype.png" alt="" /><figcaption>Thanks Urban Dictionary</figcaption>
 </figure>
+</section></section>
+<section>
+<section id="but-first-a-brief-story" class="title-slide slide level1">
+<h1>But first a brief story</h1>
+
 </section>
-<section id="some-alternative-titles-for-this-presentation" class="slide level2">
-<h2>Some alternative titles for this presentation</h2>
+<section id="you-in-the-monolotic-e-commerce-factory" class="slide level2">
+<h2>You in the monolotic e-commerce factory</h2>
 <ul>
-<li class="fragment">There is a ________ for that
+<li class="fragment">The requirement - 1 day</li>
+<li class="fragment">The implementation - 6 weeks</li>
+<li class="fragment">The (bad) deployment - 1 day</li>
+<li class="fragment">Back to implementation - 3 weeks</li>
+<li class="fragment">The (good) deployment - 1 day</li>
+</ul>
+</section></section>
+<section>
+<section id="what-is-a-microservice" class="title-slide slide level1">
+<h1>What is a microservice?</h1>
+
+</section>
+<section id="microservice-architectural-style-is" class="slide level2">
+<h2>Microservice architectural style is…</h2>
+<blockquote>
+<p>An approach to developing a single application as a suite of small services […] (which) are built around business capabilities and independently deployable.</p>
+</blockquote>
+<p>Extract from <a href="https://www.martinfowler.com/microservices/#what">martinfowler.com</a></p>
+</section></section>
+<section>
+<section id="lets-rewrite-our-story" class="title-slide slide level1">
+<h1>Let’s rewrite our story</h1>
+
+</section>
+<section id="you-in-the-microservice-e-commerce-factory" class="slide level2">
+<h2>You in the microservice e-commerce factory</h2>
 <ul>
-<li class="fragment">tool</li>
-<li class="fragment">framework</li>
-<li class="fragment">design pattern</li>
+<li class="fragment">The requirement - 1 day</li>
+<li class="fragment">The implementation - 3 weeks</li>
+<li class="fragment">The (bad) deployment - 0.5 hours</li>
+<li class="fragment">Back to implementation - 3 days</li>
+<li class="fragment">The (good) deployment - 0.5 hours</li>
+</ul>
+</section></section>
+<section>
+<section id="pros-and-cons" class="title-slide slide level1">
+<h1>Pros and cons</h1>
+
+</section>
+<section id="pros" class="slide level2">
+<h2>Pros</h2>
+<ul>
+<li class="fragment">Strong module boundaries</li>
+<li class="fragment">Reduce side effects from changes</li>
+<li class="fragment">Independent release and deployment lifecycle</li>
+<li class="fragment">Technology and framework agnostic</li>
+</ul>
+</section>
+<section id="cons" class="slide level2">
+<h2>Cons</h2>
+<ul>
+<li class="fragment">Overall complexity
+<ul>
+<li class="fragment">Data consistency</li>
+<li class="fragment">Interaction orchestration</li>
+<li class="fragment">Service communication</li>
+<li class="fragment">Operations and deployment</li>
 </ul></li>
-<li class="fragment">Computer Science matters!</li>
-<li class="fragment">RT*M</li>
-</ul>
-</section></section>
-<section>
-<section id="why" class="title-slide slide level1">
-<h1>Why?</h1>
-
-</section>
-<section id="dont-reinvent-the-wheel" class="slide level2">
-<h2>Don’t reinvent the wheel</h2>
-</section>
-<section id="learn-the-rules-before-you-break-them" class="slide level2">
-<h2>Learn the rules before you break them</h2>
-</section>
-<section id="propose-valuable-solutions" class="slide level2">
-<h2>Propose valuable solutions</h2>
-</section>
-<section id="freedom" class="slide level2">
-<h2>Freedom</h2>
-</section></section>
-<section>
-<section id="throw-me-some-real-examples" class="title-slide slide level1">
-<h1>Throw me some real examples!</h1>
-
-</section>
-<section id="microservices" class="slide level2">
-<h2>Microservices</h2>
-<p>How old do you think the “distributed architecture by services” is?</p>
-</section>
-<section id="containers" class="slide level2">
-<h2>Containers</h2>
-<ul>
-<li class="fragment">What is a container?</li>
-<li class="fragment">And from the <a href="https://containerd.io/">containerd</a> perspective? <!-- You can see the Cloud Native Computing Foundation as well https://www.cncf.io/ --></li>
-</ul>
-</section>
-<section id="container-orchestration-and-scheduling" class="slide level2">
-<h2>Container orchestration and scheduling</h2>
-<ul>
-<li class="fragment">Do you know any other one outside the hype?</li>
 </ul>
 </section></section>
 <section>
@@ -113,48 +128,12 @@
 <h1>Where can I learn more?</h1>
 
 </section>
-<section id="well-it-depends" class="slide level2">
-<h2>Well… It depends</h2>
-<ol type="1">
-<li class="fragment">Books</li>
-<li class="fragment">Source code</li>
-<li class="fragment">Courses</li>
-<li class="fragment">Blogs</li>
-<li class="fragment">Just stand up and ask to real people</li>
-</ol>
-</section></section>
-<section>
-<section id="caveats" class="title-slide slide level1">
-<h1>Caveats</h1>
-
-</section>
-<section id="dont-be-that-guy" class="slide level2">
-<h2>Don’t be “that guy”</h2>
-</section>
-<section id="avoid-being-a-copypaste-engineer" class="slide level2">
-<h2>Avoid being a Copy/Paste Engineer</h2>
-</section>
-<section id="when-in-doubt-hack" class="slide level2">
-<h2>When in doubt HACK!</h2>
-</section>
-<section id="pay-your-tech-debts-or-else" class="slide level2">
-<h2>Pay your (tech) debts, or else!</h2>
-</section></section>
-<section>
-<section id="my-two-cents" class="title-slide slide level1">
-<h1>My two cents</h1>
-
-</section>
-<section id="ask-learn-and-improve" class="slide level2">
-<h2>Ask, learn and Improve</h2>
-</section>
-<section id="some-food-for-thought" class="slide level2">
-<h2>Some food for thought</h2>
+<section id="my-recomendations" class="slide level2">
+<h2>My recomendations</h2>
 <ul>
-<li class="fragment"><strong>The Phoenix Project</strong> by <em>Gene Kim, Kevin Behr &amp; George Spafford</em></li>
-<li class="fragment"><strong>Refactoring</strong> by <em>Martin Fowler</em></li>
+<li class="fragment"><strong>Building Microservices</strong> by <em>Sam Newman</em></li>
 <li class="fragment"><strong>Enterprise Integration Patterns</strong> by <em>Gregor Hohpe</em></li>
-<li class="fragment">Bunch more -&gt; <a href="https://apiumhub.com/tech-blog-barcelona/devops-reading-list-devops-books" class="uri">https://apiumhub.com/tech-blog-barcelona/devops-reading-list-devops-books</a></li>
+<li class="fragment">The “go to guy” <a href="https://martinfowler.com/articles/microservices.html">https://martinfowler.com</a></li>
 </ul>
 </section></section>
 <section id="questions" class="title-slide slide level1">
@@ -198,7 +177,7 @@
     </script>
     <script>
     var fallbackURL = window.location.href.substring(0, window.location.href.indexOf('#'));
-    var targetURL = "http://bit.ly/2F04FQl" || fallbackURL;
+    var targetURL = "http://bit.ly/2QmMUMt" || fallbackURL;
 
     // Skip QR generation on small devices
     if (screen.width > 760) {

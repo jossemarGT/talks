@@ -14,7 +14,7 @@ committee or other group or individual.
 
 ## FLASH NEWS: You have been bamboozled
 
-![Thanks Urban Dictionary](../../static/img/bamboozled.png)
+![Thanks Urban Dictionary](../../docs/img/bamboozled.png)
 
 ## Some alternative titles for this presentation
 

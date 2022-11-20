@@ -14,7 +14,7 @@ committee or other group or individual.
 
 ## Welcome to the microservices hype!
 
-![Thanks Urban Dictionary](../../static/img/hype.png)
+![Thanks Urban Dictionary](../../docs/img/hype.png)
 
 # But first a brief story
 
