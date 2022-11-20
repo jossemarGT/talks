@@ -58,19 +58,19 @@ At the end it is all about delivering value! ($$$)
 
 ## The first way
 
-![](../../static/img/devops-first-way.png)
+![](../../docs/img/devops-first-way.png)
 
 Systems thinking and flow
 
 ## The second way
 
-![](../../static/img/devops-second-way.png)
+![](../../docs/img/devops-second-way.png)
 
 Amplify feedback loops
 
 ## The third way
 
-![](../../static/img/devops-third-way.png)
+![](../../docs/img/devops-third-way.png)
 
 Continual experimentation and learning **culture**
 
@@ -117,11 +117,11 @@ From Google's "Site Reliability Engineering" book
 
 ## Where most companies start from
 
-![](../../static/img/devops-antipatterns.png)
+![](../../docs/img/devops-antipatterns.png)
 
 ## How the future should look like
 
-![](../../static/img/devops-types.png)
+![](../../docs/img/devops-types.png)
 
 # Wrapping up
 
