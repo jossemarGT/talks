@@ -1,3 +1,8 @@
+## The POSIX World
+<span class="date">Nov 16, 2022</span>
+[Slides](https://docs.google.com/presentation/d/1Sv_M_53y76ZfohmEx3ffLMArl7U11LMXBtgWs6oZJkU),
+[Recording](https://www.youtube.com/watch?v=rlRSIW_pCyM)
+
 ## I ♥ #!/bin/bash
 <span class="date">Nov 9, 2022</span>
 [Slides](https://docs.google.com/presentation/d/1p47jY9SdOusVXR0yuoROiTHqBcB4cgSpoUYaDkA60iw),
