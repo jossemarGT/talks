@@ -15,7 +15,7 @@ body {
 
 /* This should be the "container" element */
 body {
-  margin: 2.5% auto 0;
+  margin: 1.5% auto 0;
   width: 100%;
   max-width: 1642px;
 }
@@ -37,6 +37,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   line-height: 1.1;
   font-weight: 700;
+  /* Tweak for overlapping lines */
+  background-color: #ffffff;
 }
 
 header h1 {
@@ -107,3 +109,14 @@ section:last-child::after {
 }
 
 .short-url { display: none; }
+
+@media screen and (max-width: 1440px) {
+  body {
+    margin: 1rem 0;
+    padding: 0.5rem 2rem;
+  }
+
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+}
