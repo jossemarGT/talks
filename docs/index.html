@@ -28,7 +28,7 @@ overflow-x: hidden;
 }
 
 body {
-margin: 2.5% auto 0;
+margin: 1.5% auto 0;
 width: 100%;
 max-width: 1642px;
 }
@@ -47,6 +47,8 @@ line-height: normal;
 font-family: 'Poppins', sans-serif;
 line-height: 1.1;
 font-weight: 700;
+
+background-color: #ffffff;
 }
 header h1 {
 font-size: 1.2em;
@@ -109,6 +111,15 @@ section:last-child::after {
 display: none;
 }
 .short-url { display: none; }
+@media screen and (max-width: 1440px) {
+body {
+margin: 1rem 0;
+padding: 0.5rem 2rem;
+}
+h2, h3 {
+font-size: 1.5rem;
+}
+}
 </style>
   <base target="_blank"></base>
 </head>
@@ -116,6 +127,10 @@ display: none;
 <header id="title-block-header">
 <h1 class="title">Talks index</h1>
 </header>
+<section id="the-posix-world" class="level2">
+<h2>The POSIX World</h2>
+<p><span class="date">Nov 16, 2022</span> <a href="https://docs.google.com/presentation/d/1Sv_M_53y76ZfohmEx3ffLMArl7U11LMXBtgWs6oZJkU">Slides</a>, <a href="https://www.youtube.com/watch?v=rlRSIW_pCyM">Recording</a></p>
+</section>
 <section id="i-binbash" class="level2">
 <h2>I ♥ #!/bin/bash</h2>
 <p><span class="date">Nov 9, 2022</span> <a href="https://docs.google.com/presentation/d/1p47jY9SdOusVXR0yuoROiTHqBcB4cgSpoUYaDkA60iw">Slides</a>, <a href="https://www.youtube.com/watch?v=SFJlgpWhHZQ">Recoding</a></p>
