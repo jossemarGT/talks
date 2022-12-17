@@ -26,7 +26,7 @@ docs/index.html:
 											sed -E 's#([^:]*):(.*)#<span class="\1">\2</span>#' >>.tmp/$(subst /,-,$(slide)); \
 										echo $(slide) | cut -d/ -f2 | sed -e 's#[^\w]*#[Slides](&/)\n#' >>.tmp/$(subst /,-,$(slide));)
 	csplit -z --quiet --prefix=.tmp/slides-external --suffix-format=%02d.md --suppress-matched slides/externals.md /^$$/ {*}
-	cat $$(find .tmp -type f -exec grep -oHP 'date"\K.*' {} \; | sed -e 's/>/ /' | sort -k4nr -k2Mr -k3nr | cut -d: -f1) >>.tmp/index.tmp.md
+	cat $$(find .tmp -type f -exec grep -oHP 'date"\K.*' {} \; | sed -e 's/>/ /' | LC_ALL=en_US sort -k4nr -k2Mr -k3nr | cut -d: -f1) >>.tmp/index.tmp.md
 	sed -i -E 's/(##.*)/\n\1/g' .tmp/index.tmp.md
 	@echo '<base target="_blank" />' >.tmp/head-overrides.html
 	pandoc --standalone --self-contained --section-divs --css=index.css -H .tmp/head-overrides.html --metadata='title=$(SLIDE_INDEX_TITLE)' -t html5 -o $@ .tmp/index.tmp.md
