@@ -38,7 +38,7 @@ color: #333333;
 line-height: 1.5;
 }
 p {
-margin: 0 0 20px 0;
+margin: 0;
 }
 h1, h2, h3, h4, h5, h6 {
 margin: 0;
@@ -47,8 +47,6 @@ line-height: normal;
 font-family: 'Poppins', sans-serif;
 line-height: 1.1;
 font-weight: 700;
-
-background-color: #ffffff;
 }
 header h1 {
 font-size: 1.2em;
@@ -74,7 +72,11 @@ align-items: center
 section {
 position: relative;
 text-align: center;
-padding: auto;
+padding: 5px 0;
+margin: 0 auto 27px;
+width: 410px;
+
+background-color: #ffffff;
 }
 section .date::after {
 content: ' - ';
@@ -96,6 +98,7 @@ border-left: 1px solid #aaa;
 section::after {
 content: '';
 position: absolute;
+z-index: -1;
 left: 0;
 height: 50%;
 width: 0px;
@@ -118,6 +121,11 @@ padding: 0.5rem 2rem;
 }
 h2, h3 {
 font-size: 1.5rem;
+}
+}
+@media screen and (max-width: 520px) {
+section {
+width: auto;
 }
 }
 </style>
