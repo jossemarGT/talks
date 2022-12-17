@@ -1,3 +1,8 @@
+## K3S - Kubernetes más liviano que nunca
+<span class="date">Dec 8, 2022</span>
+[Slides](https://docs.google.com/presentation/d/1dyEiKhCRmPUOiH-8xyfLTgPS7zosKkxhnjRmp6bZGNk),
+[Recording](https://www.youtube.com/watch?v=yIaSoxi6wko)
+
 ## The POSIX World
 <span class="date">Nov 16, 2022</span>
 [Slides](https://docs.google.com/presentation/d/1Sv_M_53y76ZfohmEx3ffLMArl7U11LMXBtgWs6oZJkU),
