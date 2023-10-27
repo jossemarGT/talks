@@ -21,10 +21,12 @@ all: $(SLIDE_TARGETS)
 docs/index.html:
 	rm -rf .tmp
 	mkdir .tmp
-	@-$(foreach slide,$(SLIDE_SOURCES), sed -ne '1{/^---$$/!q;};1,/^---$$/p' $(slide) | \
-											sed -e 's/title:/##/' -e '/---/d' | \
-											sed -E 's#([^:]*):(.*)#<span class="\1">\2</span>#' >>.tmp/$(subst /,-,$(slide)); \
-										echo $(slide) | cut -d/ -f2 | sed -e 's#[^\w]*#[Slides](&/)\n#' >>.tmp/$(subst /,-,$(slide));)
+	@-$(foreach slide,$(SLIDE_SOURCES), \
+			sed -ne '1{/^---$$/!q;};1,/^---$$/p' $(slide) | \
+			sed -e 's/title:/##/' -e '/---/d' | \
+			sed -E 's#([^:]*):(.*)#<span class="\1">\2</span>#' >>.tmp/$(subst /,-,$(slide)); \
+			echo $(slide) | cut -d/ -f2 | sed -e 's#[^\w]*#[Slides](&/)\n#' >>.tmp/$(subst /,-,$(slide)); \
+	)
 	csplit -z --quiet --prefix=.tmp/slides-external --suffix-format=%02d.md --suppress-matched slides/externals.md /^$$/ {*}
 	cat $$(find .tmp -type f -exec grep -oHP 'date"\K.*' {} \; | sed -e 's/>/ /' | LC_ALL=en_US sort -k4nr -k2Mr -k3nr | cut -d: -f1) >>.tmp/index.tmp.md
 	sed -i -E 's/(##.*)/\n\1/g' .tmp/index.tmp.md
