@@ -1,8 +1,25 @@
-## K3S High Availability
+## ¿Mamá, de donde vienen los service mesh?
+<span class="date">Oct 14, 2023</span>
+[Slides](https://docs.google.com/presentation/d/1dl4PPH_QXguJU85pcoPRn6Rgkl8EUGqvfrHMPFBqRgQ)
+
+## Hablemos de autómatas y Operadores de Kubernetes
+<span class="date">Sep 29, 2023</span>
+[Slides](https://docs.google.com/presentation/d/1pTxTFReXXOY1xkZpYblekKUVEkHURORqVRTVqx4Qi3A),
+[Code](https://github.com/jossemarGT/lets-talk-about-operators)
+
+## Kuma: The Universal Service Mesh
+<span class="date">Aug 19, 2023</span>
+[Slides](https://docs.google.com/presentation/d/1lM6fOACjs1fbNB-T55SEtSJA05PFTy-rL5EprZX0Q-8)
+
+## K3S - High Availability
 <span class="date">Apr 20, 2023</span>
 [Slides](https://docs.google.com/presentation/d/1KRPSqreWla5KDc-QKbI6GnJZ1us1KBNqgh8lYDKrMnA),
 [Recording](https://www.youtube.com/live/GoQUAbS1RqQ?t=199),
 [Code](https://github.com/jossemarGT/lhk-code/tree/main/137)
+
+## Free yourself from your own lock-in
+<span class="date">Apr 3, 2023</span>
+[Recording](https://www.youtube.com/watch?v=QlPAGqVWesI)
 
 ## K3S - Kubernetes más liviano que nunca
 <span class="date">Dec 8, 2022</span>
