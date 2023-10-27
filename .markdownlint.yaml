@@ -1,0 +1,9 @@
+default: true
+# Disable "Headings should be surrounded by blank lines" rule
+MD022: false
+# Disable "No Multiple top-level headings in the same document" rule
+MD025: false
+# Disable "No Inline HTML" rule
+MD033: false
+# Disable "First line in a file should be a top-level heading" rule
+MD041: false
