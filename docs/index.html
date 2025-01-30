@@ -6,13 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Talks index</title>
   <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-  </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
   <style type="text/css">* {
 box-sizing: border-box;
 }
@@ -135,13 +143,31 @@ width: auto;
 <header id="title-block-header">
 <h1 class="title">Talks index</h1>
 </header>
-<section id="mamá-de-donde-vienen-los-service-mesh" class="level2">
-<h2>¿Mamá, de donde vienen los service mesh?</h2>
+<section id="con-contenedores-todo-es-más-sencillo" class="level2">
+<h2>Con contenedores todo es más sencillo</h2>
+<p><span class="date">Oct 28, 2024</span> <a href="https://docs.google.com/presentation/d/1LGX5txLmYuZ-bt7f5j15OgVEOnWiid3ssJJDxhT1b20">Slides</a></p>
+</section>
+<section id="cloudformation-está-bien-pero-has-probado-cdk" class="level2">
+<h2>CloudFormation está bien ¿pero has probado CDK?</h2>
+<p><span class="date">Oct 19, 2024</span> <a href="https://docs.google.com/presentation/d/1amfd2MEw9f_cquC3wfX7Fh2yqZ-x74QXGKapUScJYAY">Slides</a></p>
+</section>
+<section id="para-cuándo-el-kubernetes" class="level2">
+<h2>¿Para cuándo el Kubernetes?</h2>
+<p><span class="date">Sep 28, 2024</span> <a href="https://docs.google.com/presentation/d/13tDEMdbtOoCu_d9mbvel4sk_-gJoHZ_qLlaolG9gRrc">Slides</a></p>
+</section>
+<section id="ahora-quiero-que-kubernetes-salte" class="level2">
+<h2>Ahora quiero que Kubernetes salte</h2>
+<p><span class="date">Jul 20, 2024</span> <a href="https://docs.google.com/presentation/d/1H8ldC3v2AzVU7gfNOOcZMA8z0zRfgECyfv5sE3Nnv_4">Slides</a>
+<a href="https://github.com/jossemarGT/kubernetes-is-fun">Code</a></p>
+</section>
+<section id="mamá-de-dónde-vienen-los-service-mesh" class="level2">
+<h2>¿Mamá, de dónde vienen los service mesh?</h2>
 <p><span class="date">Oct 14, 2023</span> <a href="https://docs.google.com/presentation/d/1dl4PPH_QXguJU85pcoPRn6Rgkl8EUGqvfrHMPFBqRgQ">Slides</a></p>
 </section>
 <section id="hablemos-de-autómatas-y-operadores-de-kubernetes" class="level2">
 <h2>Hablemos de autómatas y Operadores de Kubernetes</h2>
-<p><span class="date">Sep 29, 2023</span> <a href="https://docs.google.com/presentation/d/1pTxTFReXXOY1xkZpYblekKUVEkHURORqVRTVqx4Qi3A">Slides</a>, <a href="https://github.com/jossemarGT/lets-talk-about-operators">Code</a></p>
+<p><span class="date">Sep 29, 2023</span> <a href="https://docs.google.com/presentation/d/1pTxTFReXXOY1xkZpYblekKUVEkHURORqVRTVqx4Qi3A">Slides</a>,
+<a href="https://github.com/jossemarGT/lets-talk-about-operators">Code</a></p>
 </section>
 <section id="kuma-the-universal-service-mesh" class="level2">
 <h2>Kuma: The Universal Service Mesh</h2>
@@ -149,7 +175,9 @@ width: auto;
 </section>
 <section id="k3s---high-availability" class="level2">
 <h2>K3S - High Availability</h2>
-<p><span class="date">Apr 20, 2023</span> <a href="https://docs.google.com/presentation/d/1KRPSqreWla5KDc-QKbI6GnJZ1us1KBNqgh8lYDKrMnA">Slides</a>, <a href="https://www.youtube.com/live/GoQUAbS1RqQ?t=199">Recording</a>, <a href="https://github.com/jossemarGT/lhk-code/tree/main/137">Code</a></p>
+<p><span class="date">Apr 20, 2023</span> <a href="https://docs.google.com/presentation/d/1KRPSqreWla5KDc-QKbI6GnJZ1us1KBNqgh8lYDKrMnA">Slides</a>,
+<a href="https://www.youtube.com/live/GoQUAbS1RqQ?t=199">Recording</a>,
+<a href="https://github.com/jossemarGT/lhk-code/tree/main/137">Code</a></p>
 </section>
 <section id="free-yourself-from-your-own-lock-in" class="level2">
 <h2>Free yourself from your own lock-in</h2>
@@ -157,39 +185,49 @@ width: auto;
 </section>
 <section id="k3s---kubernetes-más-liviano-que-nunca" class="level2">
 <h2>K3S - Kubernetes más liviano que nunca</h2>
-<p><span class="date">Dec 8, 2022</span> <a href="https://docs.google.com/presentation/d/1dyEiKhCRmPUOiH-8xyfLTgPS7zosKkxhnjRmp6bZGNk">Slides</a>, <a href="https://www.youtube.com/watch?v=yIaSoxi6wko">Recording</a>, <a href="https://github.com/jossemarGT/lhk-code/tree/main/122">Code</a></p>
+<p><span class="date">Dec 8, 2022</span> <a href="https://docs.google.com/presentation/d/1dyEiKhCRmPUOiH-8xyfLTgPS7zosKkxhnjRmp6bZGNk">Slides</a>,
+<a href="https://www.youtube.com/watch?v=yIaSoxi6wko">Recording</a>, <a href="https://github.com/jossemarGT/lhk-code/tree/main/122">Code</a></p>
 </section>
 <section id="the-posix-world" class="level2">
 <h2>The POSIX World</h2>
-<p><span class="date">Nov 16, 2022</span> <a href="https://docs.google.com/presentation/d/1Sv_M_53y76ZfohmEx3ffLMArl7U11LMXBtgWs6oZJkU">Slides</a>, <a href="https://www.youtube.com/watch?v=rlRSIW_pCyM">Recording</a>, <a href="https://github.com/k8s-gt/linux-cli-essentials/tree/main/02-the-POSIX-world">Code</a></p>
+<p><span class="date">Nov 16, 2022</span> <a href="https://docs.google.com/presentation/d/1Sv_M_53y76ZfohmEx3ffLMArl7U11LMXBtgWs6oZJkU">Slides</a>,
+<a href="https://www.youtube.com/watch?v=rlRSIW_pCyM">Recording</a>, <a href="https://github.com/k8s-gt/linux-cli-essentials/tree/main/02-the-POSIX-world">Code</a></p>
 </section>
 <section id="i-binbash" class="level2">
 <h2>I ♥ #!/bin/bash</h2>
-<p><span class="date">Nov 9, 2022</span> <a href="https://docs.google.com/presentation/d/1p47jY9SdOusVXR0yuoROiTHqBcB4cgSpoUYaDkA60iw">Slides</a>, <a href="https://www.youtube.com/watch?v=SFJlgpWhHZQ">Recoding</a>, <a href="https://github.com/k8s-gt/linux-cli-essentials/tree/main/01-I-love-POSIX-shells">Code</a></p>
+<p><span class="date">Nov 9, 2022</span> <a href="https://docs.google.com/presentation/d/1p47jY9SdOusVXR0yuoROiTHqBcB4cgSpoUYaDkA60iw">Slides</a>,
+<a href="https://www.youtube.com/watch?v=SFJlgpWhHZQ">Recoding</a>, <a href="https://github.com/k8s-gt/linux-cli-essentials/tree/main/01-I-love-POSIX-shells">Code</a></p>
 </section>
 <section id="crea-tu-propio-laboratorio-de-kubernetes---día-2" class="level2">
 <h2>Crea tu propio laboratorio de Kubernetes - Día 2</h2>
-<p><span class="date">Oct 4, 2022</span> <a href="https://docs.google.com/presentation/d/1zmTROriozYoOIxUwVvoM4Bb8lD9e7Zo3ZJEcMy160uQ">Slides</a>, <a href="https://www.youtube.com/watch?v=UzW8telaXgg&amp;list=PLu_V-YCGXnXOU647H_IPHzrTBAaXS4wz1&amp;index=2">Recoding</a>, <a href="https://github.com/k8s-gt/k8s-lab/tree/day-2-demo">Code</a></p>
+<p><span class="date">Oct 4, 2022</span> <a href="https://docs.google.com/presentation/d/1zmTROriozYoOIxUwVvoM4Bb8lD9e7Zo3ZJEcMy160uQ">Slides</a>,
+<a href="https://www.youtube.com/watch?v=UzW8telaXgg&amp;list=PLu_V-YCGXnXOU647H_IPHzrTBAaXS4wz1&amp;index=2">Recoding</a>,
+<a href="https://github.com/k8s-gt/k8s-lab/tree/day-2-demo">Code</a></p>
 </section>
 <section id="automate" class="level2">
 <h2>1 2 3 Automate</h2>
-<p><span class="date"> Jul 18, 2022</span> <span class="short-url"> https://bit.ly/3yKjejD</span> <a href="1-2-3-automate/">Slides</a></p>
+<p><span class="date"> Jul 18, 2022</span> <span class="short-url">
+https://bit.ly/3yKjejD</span> <a href="1-2-3-automate/">Slides</a></p>
 </section>
 <section id="kiss4slides" class="level2">
 <h2>kiss4slides</h2>
-<p><span class="date"> Dec 22, 2021</span> <span class="short-url"> https://bit.ly/3J7wvHj</span> <a href="kiss4slides/">Slides</a></p>
+<p><span class="date"> Dec 22, 2021</span> <span class="short-url">
+https://bit.ly/3J7wvHj</span> <a href="kiss4slides/">Slides</a></p>
 </section>
 <section id="the-devops-paradox" class="level2">
 <h2>The DevOps Paradox</h2>
-<p><span class="date"> Jul 31, 2019</span> <span class="short-url"> http://bit.ly/2OtebA1</span> <a href="the-devops-paradox/">Slides</a></p>
+<p><span class="date"> Jul 31, 2019</span> <span class="short-url">
+http://bit.ly/2OtebA1</span> <a href="the-devops-paradox/">Slides</a></p>
 </section>
 <section id="microservices-and-you" class="level2">
 <h2>Microservices and you</h2>
-<p><span class="date"> Sep 06, 2018</span> <span class="short-url"> http://bit.ly/2QmMUMt</span> <a href="microservices-and-you/">Slides</a></p>
+<p><span class="date"> Sep 06, 2018</span> <span class="short-url">
+http://bit.ly/2QmMUMt</span> <a href="microservices-and-you/">Slides</a></p>
 </section>
 <section id="concept-driven-infrastructure" class="level2">
 <h2>Concept Driven Infrastructure</h2>
-<p><span class="date"> May 29, 2018</span> <span class="short-url"> http://bit.ly/2F04FQl</span> <a href="concept-driven-infrastructure/">Slides</a></p>
+<p><span class="date"> May 29, 2018</span> <span class="short-url">
+http://bit.ly/2F04FQl</span> <a href="concept-driven-infrastructure/">Slides</a></p>
 </section>
 <section id="lo-que-no-me-enseñaron-en-la-usac-acerca-de-negocios" class="level2">
 <h2>Lo que no me enseñaron en la USAC acerca de negocios</h2>
