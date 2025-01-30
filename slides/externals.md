@@ -1,4 +1,21 @@
-## ¿Mamá, de donde vienen los service mesh?
+## Con contenedores todo es más sencillo
+<span class="date">Oct 28, 2024</span>
+[Slides](https://docs.google.com/presentation/d/1LGX5txLmYuZ-bt7f5j15OgVEOnWiid3ssJJDxhT1b20)
+
+## CloudFormation está bien ¿pero has probado CDK?
+<span class="date">Oct 19, 2024</span>
+[Slides](https://docs.google.com/presentation/d/1amfd2MEw9f_cquC3wfX7Fh2yqZ-x74QXGKapUScJYAY)
+
+## ¿Para cuándo el Kubernetes?
+<span class="date">Sep 28, 2024</span>
+[Slides](https://docs.google.com/presentation/d/13tDEMdbtOoCu_d9mbvel4sk_-gJoHZ_qLlaolG9gRrc)
+
+## Ahora quiero que Kubernetes salte
+<span class="date">Jul 20, 2024</span>
+[Slides](https://docs.google.com/presentation/d/1H8ldC3v2AzVU7gfNOOcZMA8z0zRfgECyfv5sE3Nnv_4)
+[Code](https://github.com/jossemarGT/kubernetes-is-fun)
+
+## ¿Mamá, de dónde vienen los service mesh?
 <span class="date">Oct 14, 2023</span>
 [Slides](https://docs.google.com/presentation/d/1dl4PPH_QXguJU85pcoPRn6Rgkl8EUGqvfrHMPFBqRgQ)
 

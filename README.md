@@ -1,11 +1,11 @@
 # Talks index
 
-Although I cannot call myself a "public speaker", I would like to keep track of
-the talks I have shared in the past.
-[Over here](https://jossemargt.github.io/talks/) you will find:
+While I wouldn’t consider myself a "public speaker", I want to keep a record of
+the talks I have given in the past. [Here](https://jossemargt.github.io/talks/),
+you will find:
 
-- Slides I have written in Markdown notation
-- Links to presentations I have created using other platforms (i.e.: Google Slides)
+- Slides I have created in Markdown notation
+- Links to presentations I have developed using other platforms, such as Google Slides
 
 ## How does it process the MD files?
 
@@ -16,6 +16,6 @@ the talks I have shared in the past.
 
 ## License
 
-All the content within this respository is under
-[Creative Commons CC-SA](https://creativecommons.org/licenses/by-sa/4.0/)
-license, so feel free to use it.
+All the content within this respository and the slides referenced by them are
+under [Creative Commons CC-SA](https://creativecommons.org/licenses/by-sa/4.0/)
+license.
